@@ -27,14 +27,14 @@ export default {
         DEFAULT: '150%'
       },
       fontSize: {
-        sm: '8px',
-        base: '10px',
-        lg: '12px',
-        xl: '14px',
-        '2xl': '16px',
-        '3xl': '24px',
-        '4xl': '32px',
-        '5xl': '64px'
+        sm: '0.8rem',
+        base: '1rem',
+        lg: '1.2rem',
+        xl: '1.4rem',
+        '2xl': '1.6rem',
+        '3xl': '2.4rem',
+        '4xl': '3.2rem',
+        '5xl': '6.4rem'
       }
     }
   },
