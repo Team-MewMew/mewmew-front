@@ -21,7 +21,10 @@ export default {
         },
         white: '#fff',
         black: '#000',
-        rde: '#e23939'
+        red: {
+          100: '#fD6D7a',
+          200: '#e23939'
+        }
       },
       lineHeight: {
         DEFAULT: '150%'
@@ -32,9 +35,10 @@ export default {
         lg: '1.2rem',
         xl: '1.4rem',
         '2xl': '1.6rem',
-        '3xl': '2.4rem',
-        '4xl': '3.2rem',
-        '5xl': '6.4rem'
+        '3xl': '1.8rem',
+        '4xl': '2.4rem',
+        '5xl': '3.2rem',
+        '6xl': '6.4rem'
       }
     }
   },
