@@ -9,6 +9,7 @@
   <input type="text" v-model="params.message" />
   <div class="text-3xl text-slate-400 md:text-red-500">Home</div>
   ci/cd 테스트 중
+  <AIRecommendation></AIRecommendation>
 </template>
 
 <script setup lang="ts">
@@ -16,6 +17,7 @@ import { ref } from 'vue';
 import { useFetch } from '@/composables/useFetch';
 import { useMutation } from '@/composables/useMutation';
 import Spinner from '@/components/common/Spinner.vue';
+import AIRecommendation from '@/components/common/AIRecommendation.vue';
 
 const params = ref({
   message: ''
