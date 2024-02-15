@@ -1,7 +1,11 @@
 <template>
   <BaseBlackHeader v-show="isShowingHeader" />
   <section class="overflow-y-auto" :class="[contentsHeight]">
-    <RouterView />
+    <router-view v-slot="{ Component }">
+      <transition name="fade">
+        <component :is="Component" />
+      </transition>
+    </router-view>
   </section>
   <BaseFooter v-show="isShowingFooter" />
 </template>
@@ -11,11 +15,12 @@ import { computed } from 'vue';
 import { RouterView, useRoute } from 'vue-router';
 import BaseFooter from '@/layouts/BaseFooter.vue';
 import BaseBlackHeader from '@/layouts/BaseBlackHeader.vue';
+import router from './router';
 
 const route = useRoute();
 
 const isShowingHeader = computed(() => {
-  if (route.path === '/intro') {
+  if (route.path === '/intro' || route.path === '/login') {
     return false;
   }
 
@@ -23,7 +28,7 @@ const isShowingHeader = computed(() => {
 });
 
 const isShowingFooter = computed(() => {
-  if (route.path === '/intro') {
+  if (route.path === '/intro' || route.path === '/login') {
     return false;
   }
 
@@ -43,4 +48,13 @@ const contentsHeight = computed(() => {
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
