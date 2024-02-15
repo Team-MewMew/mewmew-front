@@ -21,20 +21,24 @@ export default {
         },
         white: '#fff',
         black: '#000',
-        rde: '#e23939'
+        red: {
+          100: '#fD6D7a',
+          200: '#e23939'
+        }
       },
       lineHeight: {
         DEFAULT: '150%'
       },
       fontSize: {
-        sm: '8px',
-        base: '10px',
-        lg: '12px',
-        xl: '14px',
-        '2xl': '16px',
-        '3xl': '24px',
-        '4xl': '32px',
-        '5xl': '64px'
+        sm: '0.8rem',
+        base: '1rem',
+        lg: '1.2rem',
+        xl: '1.4rem',
+        '2xl': '1.6rem',
+        '3xl': '1.8rem',
+        '4xl': '2.4rem',
+        '5xl': '3.2rem',
+        '6xl': '6.4rem'
       }
     }
   },
